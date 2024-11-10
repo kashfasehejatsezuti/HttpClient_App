@@ -1,0 +1,63 @@
+<div class="container text-center">
+  <h1>Hello I am Get Api</h1>
+  <div>
+    <div>
+      <button class="btn btn-success margin" (click)="getAllUser()">
+        Click Me
+      </button>
+    </div>
+    <div class="row margin">
+      <div>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Id</th>
+              <th scope="col">Name</th>
+              <th scope="col">UserName</th>
+              <th scope="col">Email</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr
+              class="table-success"
+              *ngFor="let user of userList; let i = index"
+            >
+              <td>{{ user.id }}</td>
+              <td>{{ user.name }}</td>
+              <td>{{ user.username }}</td>
+              <td>{{ user.email }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div>
+      <button class="btn btn-danger margin" (click)="getAllEmployee()">
+        Click Here
+      </button>
+    </div>
+    <div class="row margin">
+      <div>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <!-- <th scope="col">Id</th> -->
+              <th scope="col">Name</th>
+              <th scope="col">Id</th>
+              <th scope="col">Code</th>
+              <th scope="col">Designation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let emp of empList; let i = index">
+              <td>{{ emp.empName }}</td>
+              <td>{{ emp.empId }}</td>
+              <td>{{ emp.empCode }}</td>
+              <td>{{ emp.empDesignation | uppercase }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
